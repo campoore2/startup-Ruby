@@ -17,7 +17,16 @@ describe('team') do
   describe('Team#save') do
     it "saves a team to an array of other teams" do
       team = Team.new("Some Startup").save()
-      expect(Team.all()).to(eq(team)) 
+      expect(Team.all()).to(eq(team))
+    end
+  end
+
+  describe('Team#add_member') do
+    it "stores the member" do
+      team = Team.new("Some Startup")
+      team.save()
+      team.add_member("Little Timmy")
+      expect(team.teams_root).to(eq(["Little Timmy"]))
     end
   end
 end
