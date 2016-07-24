@@ -15,7 +15,7 @@ class Team
   end
 
   define_method(:save) do
-    @@team.push(self)
+    @@teams.push(self)
   end
 
   define_method(:add_member) do |new_member|
