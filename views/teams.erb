@@ -2,7 +2,7 @@
 <% if @team_list %>
   <% @team_list.each() do |this_team| %>
     <ul>
-      <li><%=this_team.name %></li>
+      <li><a href="/teams/add/members"><%=this_team.name %></a></li>
     </ul>
   <% end %>
   <% else %>

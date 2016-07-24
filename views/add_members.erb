@@ -1,0 +1,10 @@
+<h1>Add Members:</h1>
+
+<form action="/teams/add/members" method="post">
+  <label for="member_name">Member Name</label>
+  <input type="text" name="member_name">
+  <input type="hidden" name="id" value="<%= @this_team.id %>">
+  <button type="submit" class="btn btn-primary">Add Member</button>
+</form>
+
+<a class="btn btn-default" href="/">Home</a>

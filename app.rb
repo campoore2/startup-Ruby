@@ -19,3 +19,14 @@ post '/teams/add' do
   @team_list = Team.all()
   redirect('/teams')
 end
+
+get '/teams/add/members' do
+  @this_team = Team.find(params.fetch('id'))
+  erb(:add_members)
+end
+
+post '/teams/add/members' do
+  @this_team = Team.find(params.fetch('id'))
+  @this_team.add_member(Team.new(params.fetch('new_team')))
+  erb(:index)
+end

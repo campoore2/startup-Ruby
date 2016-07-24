@@ -30,10 +30,10 @@ class Team
     @@teams
   end
 
-  define_singleton_method(:find) do |id|
+  define_singleton_method(:find) do |this_id|
     this_team = nil
     @@teams.each() do |team|
-      if teamid().eql?(id.to_i())
+      if team.id().eql?(this_id.to_i())
         this_team = team
       end
     end
