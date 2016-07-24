@@ -3,11 +3,15 @@ class Team
   define_method(:initialize)  do |team|
     @name = team
     @teams_root = []
-    @id = @@teams.length().to_i()
+    @id = @@teams.length().to_i().+(1)
   end
 
   define_method(:name) do
     @name
+  end
+
+  define_method(:id) do
+    @id
   end
 
   define_method(:teams_root) do
