@@ -3,7 +3,7 @@ class Team
   define_method(:initialize)  do |team|
     @name = team
     @teams_root = []
-    @id = @@teams.lenght().to_i()
+    @id = @@teams.length().to_i()
   end
 
   define_method(:name) do
@@ -34,5 +34,9 @@ class Team
       end
     end
     this_team
+  end
+
+  define_singleton_method(:clear) do
+    @@teams = []
   end
 end
