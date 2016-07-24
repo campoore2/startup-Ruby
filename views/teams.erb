@@ -1,0 +1,20 @@
+<h1>StartUp Teams</h1>
+<% if @team_list %>
+  <% @team_list.each() do |this_team| %>
+    <ul>
+      <li><%=this_team.name %></li>
+    </ul>
+  <% end %>
+  <% else %>
+    <h6>No Teams</h6>
+<% end %>
+
+<h2>Add a new Team</h2>
+<form action="/teams/add" method="post">
+  <label for="team_name">Team Name</label>
+  <input type="text" name="team_name" required>
+  <button type="submit" class="btn btn-primary">Add</button>
+</form>
+
+
+<a class="btn btn-default" href="/">Home</a>
